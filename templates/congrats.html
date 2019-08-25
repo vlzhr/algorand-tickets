@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>You have bought a ticket!</title>
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+              background: -webkit-linear-gradient(to top, #314755, #26a0da); /* Chrome 10-25, Safari 5.1-6 */
+              background: linear-gradient(to top, #314755, #26a0da); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            font-size: 40px;
+        }
+        section {
+            width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px 45px 20px 65px;
+            min-height: 100vh;
+        }
+        .events {
+            margin: 20px 0 50px;
+        }
+        .desc {
+            text-align: justify;
+        }
+        input {
+            padding: 10px;
+            font-size: 14px;
+            border: 0px solid black;
+            border-bottom: 1px solid black;
+        }
+        a {
+            text-decoration: none;
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>it's done!</h1>
+        <strong>Congratulations!</strong> You have bought a ticket using blockchain technologies. Here is a proof stored in a decentralised way that garantees you are owning the ticket:
+        <a href="https://testnet.algoexplorer.io/tx/{{txid}}" target="algorand">Algorand Explorer</a>
+        <br><br>
+        Go <a href="/">back</a> to the main page
+    </section>
+</body>
+</html>

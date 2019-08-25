@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Complete a form</title>
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+              background: -webkit-linear-gradient(to top, #314755, #26a0da); /* Chrome 10-25, Safari 5.1-6 */
+              background: linear-gradient(to top, #314755, #26a0da); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            font-size: 40px;
+        }
+        section {
+            width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px 45px 20px 65px;
+            min-height: 100vh;
+        }
+        .events {
+            margin: 20px 0 50px;
+        }
+        .desc {
+            text-align: justify;
+        }
+                input[type="text"] {
+            padding: 10px;
+            font-size: 14px;
+            border: 0px solid black;
+            border-bottom: 1px solid black;
+        }
+        a {
+            text-decoration: none;
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <h2>complete a form for buying a ticket to the event {{event["name"]}}</h2>
+    <form action="add_purchase">
+        <input type="text" name="name" placeholder="name">
+        <input type="text" name="email" placeholder="email">
+        <select name="type" id="">
+            <option value="economy">economy</option>
+            <option value="vip">vip</option>
+        </select>
+        <input type="text" style="display: none;" name="eid" value="{{event['id']}}">
+        <input type="submit" value="buy!">
+    </form>
+    <br><br><br><br>
+    <img width="500" src="{{url_for('static', filename='payment_form.png')}}" alt="payment form">
+</section>
+</body>
+</html>
